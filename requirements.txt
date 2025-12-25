@@ -1,0 +1,38 @@
+# Warehouse Benchmark Requirements
+# Core dependencies for reinforcement learning and analysis
+
+# Core Python packages
+numpy>=1.24.0
+torch>=2.0.0
+torchvision>=0.15.0
+torchaudio>=2.0.0
+
+# Reinforcement Learning
+gymnasium>=0.29.0
+skrl>=1.2.0
+
+# Data analysis and visualization
+pandas>=2.0.0
+matplotlib>=3.7.0
+seaborn>=0.12.0
+
+# Scientific computing
+scipy>=1.11.0
+
+# Configuration and utilities
+pyyaml>=6.0
+tqdm>=4.65.0
+
+# Optional: For advanced analysis
+# scikit-learn>=1.3.0  # For statistical analysis
+# plotly>=5.15.0      # For interactive plots
+# wandb>=0.15.0       # For experiment tracking
+
+# Development and testing
+pytest>=7.4.0
+black>=23.0.0
+isort>=5.12.0
+mypy>=1.5.0
+
+# Note: IsaacLab provides its own dependencies
+# Install IsaacLab separately following their documentation

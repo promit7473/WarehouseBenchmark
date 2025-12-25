@@ -1,0 +1,52 @@
+#usda 1.0
+(
+    defaultPrim = "World"
+    upAxis = "Y"
+)
+
+def Xform "World" {
+    def Xform "warehouse" {
+        def Xform "floor" {
+            def Cube "floor_mesh" {
+                double size = 50.0
+                color3f[] primvars:displayColor = [(0.5, 0.5, 0.5)]
+            }
+        }
+
+        def Xform "shelves" {
+            def Xform "shelf_1" {
+                double3 xformOp:translate = (5, 0, 1)
+                def Cube "shelf_mesh" {
+                    double3 xformOp:scale = (0.2, 1.0, 1.0)
+                    color3f[] primvars:displayColor = [(0.6, 0.6, 0.7)]
+                }
+            }
+
+            def Xform "shelf_2" {
+                double3 xformOp:translate = (-5, 0, 1)
+                def Cube "shelf_mesh" {
+                    double3 xformOp:scale = (0.2, 1.0, 1.0)
+                    color3f[] primvars:displayColor = [(0.6, 0.6, 0.7)]
+                }
+            }
+        }
+
+        def Xform "obstacles" {
+            def Xform "crate_1" {
+                double3 xformOp:translate = (3, 3, 0.5)
+                def Cube "crate_mesh" {
+                    double3 xformOp:scale = (0.5, 0.5, 0.4)
+                    color3f[] primvars:displayColor = [(0.8, 0.4, 0.2)]
+                }
+            }
+
+            def Xform "crate_2" {
+                double3 xformOp:translate = (-3, -3, 0.5)
+                def Cube "crate_mesh" {
+                    double3 xformOp:scale = (0.4, 0.6, 0.3)
+                    color3f[] primvars:displayColor = [(0.4, 0.6, 0.8)]
+                }
+            }
+        }
+    }
+}

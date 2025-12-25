@@ -1,0 +1,28 @@
+seed: 42
+
+agent:
+  name: SAC
+  memory_size: 100000
+  learning_rate: 1.0e-4
+  batch_size: 128
+  gradient_steps: 1
+  actor_learning_rate: 1.0e-4
+  critic_learning_rate: 1.0e-4
+  learn_entropy: true
+  entropy_learning_rate: 1.0e-4
+  initial_entropy_value: 0.1
+  discount_factor: 0.99
+  polyak: 0.01
+  random_timesteps: 0
+  learning_starts: 1000
+  action_scaler: null
+  rewards_shaper: null
+  state_preprocessor: null
+  state_preprocessor_kwargs: {}
+  grad_norm_clip: 1.0
+  experiment:
+    write_interval: 100
+
+trainer:
+  timesteps: 50000                 # 50k timesteps - fast benchmarking
+  parallel_seeds: 1                # Number of parallel training runs

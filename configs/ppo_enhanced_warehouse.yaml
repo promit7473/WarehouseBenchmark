@@ -1,0 +1,27 @@
+seed: 42
+agent:
+  name: PPO_ENHANCED
+  rollouts: 32  # Larger rollouts for stability
+  learning_epochs: 8
+  mini_batches: 4
+  discount_factor: 0.99
+  lambda: 0.95
+  learning_rate: 1.0e-4  # Standardized learning rate for fair benchmarking
+  learning_rate_scheduler: KLAdaptiveRL
+  learning_rate_scheduler_kwargs:
+    kl_threshold: 0.016  # Higher KL threshold for enhanced PPO
+  state_preprocessor: RunningStandardScaler
+  state_preprocessor_kwargs:
+    size: 198  # 3(lin_vel) + 3(ang_vel) + 3(gravity) + 4(last_action) + 3(waypoint) + 2(aisle) + 180(lidar)
+  value_preprocessor: RunningStandardScaler
+  value_preprocessor_kwargs:
+    size: 1
+  rewards_shaper: null
+  # Enhanced PPO specific parameters
+  clip_value: true
+  value_loss_scale: 1.0
+  entropy_loss_scale: 0.01
+
+trainer:
+  timesteps: 1000000  # 1M timesteps for proper convergence on complex warehouse navigation
+  parallel_seeds: 1
