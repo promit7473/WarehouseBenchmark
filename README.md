@@ -22,13 +22,13 @@ WarehouseBenchmark provides a realistic simulation environment for training auto
 
 - NVIDIA Isaac Lab ([installation guide](https://isaac-sim.github.io/IsaacLab/main/source/setup/installation/index.html))
 - Python 3.10+
-- CUDA-compatible GPU (RTX 3070 or better recommended)
+- CUDA-compatible GPU
 
 ### Setup
 
 1. Clone the repository:
 ```bash
-git clone <repository-url> WarehouseBenchmark
+git clone https://github.com/promit7473/WarehouseBenchmark.git
 cd WarehouseBenchmark
 ```
 
@@ -160,7 +160,7 @@ Continuous wheel velocities for differential drive control:
 - Simulation Frequency: 60 Hz
 - Control Frequency: 10 Hz
 - Success Threshold: 1.5m from waypoint
-- Max Parallel Environments: 128 (headless), 4 (GUI)
+- Max Parallel Environments: Hardware-dependent
 
 ### Curriculum Learning
 
@@ -332,8 +332,8 @@ If you use this benchmark in your research, please cite:
 ```bibtex
 @software{warehousebenchmark2024,
   title={WarehouseBenchmark: A Deep RL Benchmark for Warehouse Navigation},
-  year={2024},
-  url={https://github.com/yourusername/WarehouseBenchmark}
+  year={2025},
+  url={https://github.com/promit7473/WarehouseBenchmark}
 }
 ```
 
